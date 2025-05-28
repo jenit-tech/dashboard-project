@@ -1,4 +1,4 @@
-import React from 'react'
+
 import image13 from '../assets/tablericon.png'
 
 const Lost = () => {

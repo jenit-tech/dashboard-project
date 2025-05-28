@@ -1,4 +1,4 @@
-import React from 'react'
+
 import image12 from '../assets/green.png'
 import image13 from '../assets/tablericon.png'
 

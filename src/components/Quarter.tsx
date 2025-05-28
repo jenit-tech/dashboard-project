@@ -1,18 +1,15 @@
-import React from 'react'
+
 import {
     RadialBarChart,
     RadialBar,
    
-    Tooltip,
+
     PolarAngleAxis
   } from 'recharts';
   
 import image13 from '../assets/tablericon.png'
 const Quarter = () => {
-    const data = [
-  
-        { name: 'Goal', value: 84, fill: 'var(--Mid-Orange, #FFCD71)' } // progress ring
-      ];
+   
       
       
     return (
@@ -43,9 +40,8 @@ const Quarter = () => {
               tick={false}
             />
             <RadialBar
-              minAngle={15}
               background
-              clockWise
+             
               dataKey="value"
               angleAxisId={0}
             />

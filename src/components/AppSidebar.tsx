@@ -1,4 +1,4 @@
-import React from 'react'
+
 import image1 from '../assets/Logomark.png'
 import image2 from '../assets/dashboard.png'
 import image3 from '../assets/customer.png'
