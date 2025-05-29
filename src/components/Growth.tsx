@@ -8,7 +8,7 @@ import {
   YAxis,
 
   CartesianGrid,
-  Legend
+
 } from 'recharts';
 
 import image14 from '../assets/cust.png'
