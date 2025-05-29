@@ -4,11 +4,11 @@ import image13 from '../assets/tablericon.png'
 
 const Revenue = () => {
   return (
-    <div className="rounded-[16px]  gap-[8px] bg-[var(--White,#FFFFFF)] flex flex-col  p-6 m-2 pr-50">
+    <div className="h-[261px] rounded-[16px]  gap-[8px] bg-[var(--White,#FFFFFF)] flex flex-col  p-6 m-2 pr-50">
  <p className="font-inter font-semibold text-[20px] leading-[100%] tracking-[-0.2px] text-[var(--Black,#131313)] mb-1">
   Revenues
 </p>
-<div className='mb-15'>
+<div className='mb-10'>
 <div className='flex flex-row items-center my-3'>
 <p className="font-inter font-medium text-[48px] leading-[100%] tracking-[-2px] text-[var(--Black,#131313)] mr-3">
   15%

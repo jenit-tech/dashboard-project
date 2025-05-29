@@ -20,7 +20,7 @@ import { Search } from 'lucide-react';
 
 const AppSidebar = () => {
   return (
-    <div className="flex flex-col justify-between h-screen w-[280px]  min-w-[280px] max-w-[320px] rounded-[16px]  bg-[var(--White,_#FFFFFF)] p-5 m-2">
+    <div className="flex flex-col justify-between h-screen w-[280px]  min-w-[280px] max-w-[320px] rounded-[16px]  bg-[var(--White,_#FFFFFF)] p-5 ">
 
     <div className='flex flex-col'>
         <div className='flex flex-row mb-5'>
