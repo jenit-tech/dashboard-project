@@ -38,7 +38,7 @@ const TopStates = () => {
   <BarChart data={data} layout="vertical">
     {/* Generate a gradient for each bar */}
     <defs>
-      {data.map((index) => (
+      {data.map((_, index) => (
         <linearGradient
           key={`gradient-${index}`}
           id={`gradient-${index}`}
@@ -60,7 +60,7 @@ const TopStates = () => {
     {/* <Tooltip formatter={(value) => `${value}`} /> */}
 
     <Bar dataKey="value" barSize={50}>
-      {data.map((index) => (
+      {data.map((_, index) => (
         <Cell key={`cell-${index}`} fill={`url(#gradient-${index})`} />
       ))}
        <LabelList
