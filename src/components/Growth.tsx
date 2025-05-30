@@ -51,8 +51,8 @@ Yearly
 
 
 
-<div>
-<ResponsiveContainer width={450} height={200}>
+<div >
+<ResponsiveContainer className='flex-1' width={450} height={200}>
   <AreaChart data={data} margin={{ top: 20, right: 30, left: 0, bottom: 0 }}>
     {/* Optional grid */}
     <CartesianGrid strokeDasharray="3 3" />

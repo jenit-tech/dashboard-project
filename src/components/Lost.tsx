@@ -3,7 +3,7 @@ import image13 from '../assets/tablericon.png'
 
 const Lost = () => {
   return (
-    <div className="h-[261px] rounded-[16px]  gap-[8px] bg-[var(--White,#FFFFFF)] flex flex-col  p-6 m-2 pr-50">
+    <div className="w-full h-[261px] rounded-[16px]  gap-[8px] bg-[var(--White,#FFFFFF)] flex flex-col  p-6 m-2 pr-50">
  <p className="font-inter font-semibold text-[20px] leading-[100%] tracking-[-0.2px] text-[var(--Black,#131313)] mb-1">
  Lost deals
 </p>
@@ -17,7 +17,7 @@ const Lost = () => {
 
 
 </div>
-<p className="font-inter font-normal text-[14px] leading-[100%] tracking-[-0.3px] text-[var(--Dark-Gray,#454545)]">
+<p className="font-inter font-normal text-[14px] leading-[100%] tracking-[-0.3px] text-[var(--Dark-Gray,#454545)] whitespace-nowrap">
 You closed 96 out of 100 deals
 </p>
 </div>

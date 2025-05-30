@@ -13,7 +13,7 @@ const Quarter = () => {
       
       
     return (
-        <div className="w-[260px] h-[261px] rounded-2xl bg-white  p-4 flex flex-col items-center justify-between m-2 ">
+        <div className="w-full h-[261px] rounded-2xl bg-white  p-4 flex flex-col items-center justify-between m-2 ">
         {/* Top title */}
         <h2 className="text-[#131313] font-inter font-semibold text-lg mb-2">
           Quarter goal
