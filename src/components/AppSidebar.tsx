@@ -32,7 +32,7 @@ const AppSidebar = ({ showIconsOnly, toggleIconsAndText }: AppSidebarProps) => {
   };
 
   return (
-    <div className={`flex flex-col justify-between h-screen ${sidebarWidth} rounded-[16px] bg-[var(--White,#FFFFFF)] p-5 m-2 transition-all duration-300 fixed`}>
+    <div className={`flex flex-col justify-between  ${sidebarWidth} rounded-[16px] bg-[var(--White,#FFFFFF)] p-5 m-2 transition-all duration-300 fixed overflow-auto`}>
       
       {/* Header */}
       <div className='flex flex-col'>
@@ -65,7 +65,7 @@ const AppSidebar = ({ showIconsOnly, toggleIconsAndText }: AppSidebarProps) => {
           <div className='flex flex-row p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px]'>
             <img src={image2} alt="icon" className="w-[12px] h-[12px] mr-5" />
             {!showIconsOnly && (
-              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px]">
+              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] hover:text-[#734A00]">
                 Dashboard
               </p>
             )}
@@ -81,10 +81,10 @@ const AppSidebar = ({ showIconsOnly, toggleIconsAndText }: AppSidebarProps) => {
         className='flex flex-row  '
         onClick={toggleShowList}
       >
-        <img src={image3} alt="icon" className="w-[10px] h-[10px] mr-5" />
+        <img src={image3} alt="icon" className="w-[10px] h-[10px] mr-5 hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" />
         {!showIconsOnly && (
           <div className="w-full flex flex-row items-center justify-between">
-            <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] mb-1">
+            <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] mb-1 hover:text-[#734A00]">
               Customers
             </p>
             {/* Assuming ChevronDown is an icon component */}
@@ -99,13 +99,13 @@ const AppSidebar = ({ showIconsOnly, toggleIconsAndText }: AppSidebarProps) => {
       </div>
       {showList && (
         <div className='ml-4'>
-          <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] m-3 mb-4">
+          <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] m-3 mb-4 hover:text-[#734A00]">
             Current
           </p>
-          <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] m-3 mb-4">
+          <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] m-3 mb-4 hover:text-[#734A00]">
             New
           </p>
-          <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] m-3">
+          <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] m-3 hover:text-[#734A00]">
             Negotiating
           </p>
         </div>
@@ -120,45 +120,45 @@ const AppSidebar = ({ showIconsOnly, toggleIconsAndText }: AppSidebarProps) => {
 
           {/* All reports */}
           <div className='flex flex-row p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px]'>
-            <img src={image4} alt="icon" className="w-[9px] h-[12px] mr-5" />
+            <img src={image4} alt="icon" className="w-[9px] h-[12px] mr-5 hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" />
             {!showIconsOnly && (
-              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px]">
+              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] hover:text-[#734A00]">
                 All reports
               </p>
             )}
           </div>
           {/* Geography */} 
           <div className='flex flex-row p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px]'>
-            <img src={image5} alt="icon" className="w-[12px] h-[12px] mr-5" />
+            <img src={image5} alt="icon" className="w-[12px] h-[12px] mr-5 hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" />
             {!showIconsOnly && (
-              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px]">
+              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] hover:text-[#734A00]">
                 Geography
               </p>
             )}
           </div>
           {/* Conversations */}
           <div className='flex flex-row p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px]'>
-            <img src={image6} alt="icon" className="w-[12px] h-[12px] mr-5" />
+            <img src={image6} alt="icon" className="w-[12px] h-[12px] mr-5 hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" />
             {!showIconsOnly && (
-              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px]">
+              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] hover:text-[#734A00]">
                 Conversations
               </p>
             )}
           </div>
           {/* Deals */}
           <div className='flex flex-row p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px]'>
-            <img src={image7} alt="icon" className="w-[12px] h-[11px] mr-5" />
+            <img src={image7} alt="icon" className="w-[12px] h-[11px] mr-5 hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" />
             {!showIconsOnly && (
-              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px]">
+              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] hover:text-[#734A00]">
                 Deals
               </p>
             )}
           </div>
           {/* Export */}
           <div className='flex flex-row p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px]'>
-            <img src={image8} alt="icon" className="w-[12px] h-[12px] mr-5" />
+            <img src={image8} alt="icon" className="w-[12px] h-[12px] mr-5 hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" />
             {!showIconsOnly && (
-              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px]">
+              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] hover:text-[#734A00]">
                 Export
               </p>
             )}
@@ -201,9 +201,9 @@ const AppSidebar = ({ showIconsOnly, toggleIconsAndText }: AppSidebarProps) => {
 
         {/* Settings */}
         <div className='flex flex-row p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px]'>
-          <img src={image10} alt="settings" className="w-[12px] h-[13px] mr-5" />
+          <img src={image10} alt="settings" className="w-[12px] h-[13px] mr-5 hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" />
           {!showIconsOnly && (
-            <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px]">
+            <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] hover:text-[#734A00]">
               Settings
             </p>
           )}
@@ -213,7 +213,7 @@ const AppSidebar = ({ showIconsOnly, toggleIconsAndText }: AppSidebarProps) => {
         <div className='flex flex-row p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px]'>
           <img src={image11} alt="logout" className="w-[10px] h-[10px] mr-5" />
           {!showIconsOnly && (
-            <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px]">
+            <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] hover:text-[#734A00]">
               Log out
             </p>
           )}

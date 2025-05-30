@@ -27,14 +27,14 @@ const Revenue = () => {
 </p>
 </div>
 
-<div className='flex flex-row items-center'>
+<div className='flex flex-row items-center cursor-pointer'>
 <p className="font-inter font-normal text-[14px] leading-[100%] tracking-[-0.3px] text-[var(--Dark-Orange,#734A00)] mr-2">
   Revenues report
 </p>
 <img
   src={image13}
   alt="icon"
-  className="w-[8px] h-[4px]"
+  className="w-[8px] h-[4px] cursor-pointer"
 />
 
 

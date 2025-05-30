@@ -13,10 +13,10 @@ import {
 const TopStates = () => {
 
     const data = [
-        { state: 'NY', value: 120 },
-        { state: 'MA', value: 80 },
-        { state: 'NH', value: 70 },
-        { state: 'OR', value: 50 },
+        { place: 'NY', value: 120 },
+        { place: 'MA', value: 80 },
+        { place: 'NH', value: 70 },
+        {place: 'OR', value: 50 },
       ];
      
 
@@ -35,7 +35,7 @@ const TopStates = () => {
 
 
 <ResponsiveContainer width="100%" height={200}>
-  <BarChart data={data} layout="vertical">
+  <BarChart data={data} layout="vertical" barCategoryGap={0}>
     {/* Generate a gradient for each bar */}
     <defs>
       {data.map((_, index) => (
@@ -59,25 +59,28 @@ const TopStates = () => {
     {/* Remove or comment out */}
     {/* <Tooltip formatter={(value) => `${value}`} /> */}
 
-    <Bar dataKey="value" barSize={50}>
+    <Bar dataKey="value" >
       {data.map((_, index) => (
         <Cell key={`cell-${index}`} fill={`url(#gradient-${index})`} />
       ))}
        <LabelList
-        dataKey="value"
-        position="left"
-        style={{ fill: 'black', fontSize: 12 }}
-        formatter={(value: number) => `${value}`}
+        dataKey="place"  // Changed from "value" to "place"
+        position="insideLeft"
+        style={{ fill: 'black', fontSize: 12,  fontWeight: 'bold'}}
       />
       <LabelList
         dataKey="value"
-        position="right"
+        position="insideRight"
         style={{ fill: 'black', fontSize: 12 }}
-        formatter={(value: number) => `${value}`}
+        formatter={(value: number) => `${value}K`}
       />
     </Bar>
   </BarChart>
 </ResponsiveContainer>
+
+
+
+
 </div>
 </div>
   )
