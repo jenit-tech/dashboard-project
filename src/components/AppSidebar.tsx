@@ -199,15 +199,17 @@ const AppSidebar = ({ showIconsOnly, toggleIconsAndText }: AppSidebarProps) => {
       {/* User info and settings */}
       <div className='w-full flex flex-row justify-end'>
       <button
-            onClick={toggleIconsAndText}
-            className="mt-2 px-4 py-2 rounded ml-30 cursor-pointer"
-          >
-            {showIconsOnly ? (
-              <ChevronRight className="w-3 h-3 rounded" />
-            ) : (
-              <ChevronLeft  className="w-3 h-3 rounded" />
-            )}
-          </button>
+    onClick={toggleIconsAndText} 
+
+    className="absolute -right-2  transform -translate-y-1/2 w-6 h-6 bg-[#F6F6F3] rounded-full shadow-md flex items-center justify-center cursor-pointer z-10"
+  >
+    {showIconsOnly ? (
+      <ChevronRight className="w-3 h-3" />
+    ) : (
+      <ChevronLeft className="w-3 h-3" />
+    )}
+  </button>
+      
 
       </div>
      
