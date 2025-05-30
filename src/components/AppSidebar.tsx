@@ -14,7 +14,7 @@ import image8 from '../assets/Vector10.png'
 import image10 from '../assets/Vector11.png'
 import image11 from '../assets/Vector12.png'
 import image9 from '../assets/man.png'
-import image23 from '../assets/Collapse.png'
+
 
 interface AppSidebarProps {
   showIconsOnly: boolean;
