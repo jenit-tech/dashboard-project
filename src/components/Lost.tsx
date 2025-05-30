@@ -22,7 +22,7 @@ You closed 96 out of 100 deals
 </p>
 </div>
 
-<div className='flex flex-row items-center cursor-pointer'>
+<div className='flex flex-row items-center cursor-pointer mt-10'>
 <p className="font-inter font-normal text-[14px] leading-[100%] tracking-[-0.3px] text-[var(--Dark-Orange,#734A00)] mr-2">
 All deals
 </p>

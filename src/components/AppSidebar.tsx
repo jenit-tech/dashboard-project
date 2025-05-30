@@ -32,8 +32,15 @@ const AppSidebar = ({ showIconsOnly, toggleIconsAndText }: AppSidebarProps) => {
   };
 
   return (
-    <div className={`flex flex-col justify-between  ${sidebarWidth} rounded-[16px] bg-[var(--White,#FFFFFF)] p-5 m-2 transition-all duration-300 fixed overflow-auto`}>
-      
+    <div 
+    className={`flex flex-col justify-between ${sidebarWidth} rounded-[16px] bg-white p-5 transition-all duration-300 fixed inset-y-0 left-0 overflow-auto`}
+    style={{
+      top: '1.5rem',
+      bottom: '1rem',
+      left: '1rem',
+      height: 'calc(100vh - 2.5rem)'
+    }}
+  >
       {/* Header */}
       <div className='flex flex-col'>
         <div className='flex flex-row mb-5 items-center'>
@@ -62,10 +69,10 @@ const AppSidebar = ({ showIconsOnly, toggleIconsAndText }: AppSidebarProps) => {
         {/* Navigation Items */}
         <div className='mt-8 '>
           {/* Dashboard */}
-          <div className='flex flex-row p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px]'>
+          <div className='flex flex-row p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px] group'>
             <img src={image2} alt="icon" className="w-[12px] h-[12px] mr-5" />
             {!showIconsOnly && (
-              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] hover:text-[#734A00]">
+              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] group-hover:text-[#734A00]">
                 Dashboard
               </p>
             )}
@@ -74,22 +81,22 @@ const AppSidebar = ({ showIconsOnly, toggleIconsAndText }: AppSidebarProps) => {
 
 
           {/* Customers */}
-          <div className='p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px]'>
+          <div className='p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px] group'>
 
         
           <div
         className='flex flex-row  '
         onClick={toggleShowList}
       >
-        <img src={image3} alt="icon" className="w-[10px] h-[10px] mr-5 hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" />
+        <img src={image3} alt="icon" className="w-[10px] h-[10px] mr-5 group-hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" />
         {!showIconsOnly && (
           <div className="w-full flex flex-row items-center justify-between">
-            <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] mb-1 hover:text-[#734A00]">
+            <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] mb-1 group-hover:text-[#734A00]">
               Customers
             </p>
             {/* Assuming ChevronDown is an icon component */}
             {showList ? (
-              <ChevronUp className="w-3 h-3 rounded" />
+              <ChevronUp className="w-3 h-3 rounded " />
             ) : (
               <ChevronDown className="w-3 h-3 rounded" />
             )}
@@ -118,47 +125,70 @@ const AppSidebar = ({ showIconsOnly, toggleIconsAndText }: AppSidebarProps) => {
 
 
 
-          {/* All reports */}
-          <div className='flex flex-row p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px]'>
-            <img src={image4} alt="icon" className="w-[9px] h-[12px] mr-5 hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" />
-            {!showIconsOnly && (
-              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] hover:text-[#734A00]">
-                All reports
-              </p>
-            )}
-          </div>
-          {/* Geography */} 
-          <div className='flex flex-row p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px]'>
-            <img src={image5} alt="icon" className="w-[12px] h-[12px] mr-5 hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" />
-            {!showIconsOnly && (
-              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] hover:text-[#734A00]">
-                Geography
-              </p>
-            )}
-          </div>
-          {/* Conversations */}
-          <div className='flex flex-row p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px]'>
-            <img src={image6} alt="icon" className="w-[12px] h-[12px] mr-5 hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" />
-            {!showIconsOnly && (
-              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] hover:text-[#734A00]">
-                Conversations
-              </p>
-            )}
-          </div>
-          {/* Deals */}
-          <div className='flex flex-row p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px]'>
-            <img src={image7} alt="icon" className="w-[12px] h-[11px] mr-5 hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" />
-            {!showIconsOnly && (
-              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] hover:text-[#734A00]">
-                Deals
-              </p>
-            )}
-          </div>
+       {/* All Reports */}
+<div className='flex flex-row p-3 items-center my-2 cursor-pointer rounded-[20px] hover:bg-[#FFF7E8] group'>
+  <img 
+    src={image4} 
+    alt="icon" 
+    className="w-[9px] h-[12px] mr-5 group-hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" 
+  />
+  {!showIconsOnly && (
+    <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] group-hover:text-[#734A00]">
+      All reports
+    </p>
+  )}
+</div>
+
+{/* Geography */}
+<div className='flex flex-row p-3 items-center my-2 cursor-pointer rounded-[20px] hover:bg-[#FFF7E8] group'>
+  <img 
+    src={image5} 
+    alt="icon" 
+    className="w-[12px] h-[12px] mr-5 group-hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" 
+  />
+  {!showIconsOnly && (
+    <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] group-hover:text-[#734A00]">
+      Geography
+    </p>
+  )}
+</div>
+
+{/* Conversations */}
+<div className='flex flex-row p-3 items-center my-2 cursor-pointer rounded-[20px] hover:bg-[#FFF7E8] group'>
+  <img 
+    src={image6} 
+    alt="icon" 
+    className="w-[12px] h-[12px] mr-5 group-hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" 
+  />
+  {!showIconsOnly && (
+    <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] group-hover:text-[#734A00]">
+      Conversations
+    </p>
+  )}
+</div>
+
+{/* Deals */}
+<div className='flex flex-row p-3 items-center my-2 cursor-pointer rounded-[20px] hover:bg-[#FFF7E8] group'>
+  <img 
+    src={image7} 
+    alt="icon" 
+    className="w-[12px] h-[11px] mr-5 group-hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" 
+  />
+  {!showIconsOnly && (
+    <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] group-hover:text-[#734A00]">
+      Deals
+    </p>
+  )}
+</div>
+
+
+
+
           {/* Export */}
-          <div className='flex flex-row p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px]'>
-            <img src={image8} alt="icon" className="w-[12px] h-[12px] mr-5 hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" />
+          <div className='flex flex-row p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px] group'>
+            <img src={image8} alt="icon" className="w-[12px] h-[12px] mr-5 group-hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" />
             {!showIconsOnly && (
-              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] hover:text-[#734A00]">
+              <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] group-hover:text-[#734A00]">
                 Export
               </p>
             )}
@@ -200,10 +230,10 @@ const AppSidebar = ({ showIconsOnly, toggleIconsAndText }: AppSidebarProps) => {
         </div>
 
         {/* Settings */}
-        <div className='flex flex-row p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px]'>
-          <img src={image10} alt="settings" className="w-[12px] h-[13px] mr-5 hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" />
+        <div className='flex flex-row p-3 items-center my-2 hover:bg-[#FFF7E8] cursor-pointer rounded-[20px] group'>
+          <img src={image10} alt="settings" className="w-[12px] h-[13px] mr-5 group-hover:[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(95%)_saturate(532%)_hue-rotate(360deg)]" />
           {!showIconsOnly && (
-            <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] hover:text-[#734A00]">
+            <p className="font-inter font-normal text-[14px] leading-[14px] tracking-[-0.25px] group-hover:text-[#734A00]">
               Settings
             </p>
           )}

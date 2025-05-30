@@ -35,7 +35,7 @@ const TopStates = () => {
 
 
 <ResponsiveContainer width="100%" height={200}>
-  <BarChart data={data} layout="vertical" barCategoryGap={0}>
+  <BarChart data={data} layout="vertical" barCategoryGap="0%">
     {/* Generate a gradient for each bar */}
     <defs>
       {data.map((_, index) => (
@@ -59,7 +59,7 @@ const TopStates = () => {
     {/* Remove or comment out */}
     {/* <Tooltip formatter={(value) => `${value}`} /> */}
 
-    <Bar dataKey="value" >
+    <Bar dataKey="value">
       {data.map((_, index) => (
         <Cell key={`cell-${index}`} fill={`url(#gradient-${index})`} />
       ))}
