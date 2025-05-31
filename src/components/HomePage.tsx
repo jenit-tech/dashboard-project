@@ -35,7 +35,7 @@ const HomePage = () => {
         <div className='flex flex-col gap-4'>
 
           {/* Top Row */}
-          <div className='flex flex-row gap-2 flex-shrink-0 flex-wrap'>
+          <div className='flex flex-row gap-2 flex-shrink-0 flex-wrap mr-2'>
             <div className='flex-1 min-w-[240px]'>
               <Revenue/>
             </div>
@@ -52,7 +52,7 @@ const HomePage = () => {
             <div className='flex-1 min-w-[250px]'>
               <Customers/>
             </div>
-            <div className='flex-1 flex flex-col gap-2 min-w-[250px]'>
+            <div className='flex-1 flex flex-col gap-2 min-w-[250px] mr-2'>
               <Growth/>
               <div className='flex flex-row gap-2 flex-wrap'>
                 <div className='flex-1 min-w-[120px]'>
@@ -61,7 +61,7 @@ const HomePage = () => {
                 <div className='flex-1 min-w-[120px]'>
                   <TopYear/>
                 </div>
-                <div className='flex-1 min-w-[120px]'>
+                <div className='flex-1 min-w-[120px] '>
                   <TopBuyer/>
                 </div>
               </div>
@@ -69,14 +69,14 @@ const HomePage = () => {
           </div>
 
           {/* Bottom Row */}
-          <div className='flex flex-row h-[256px] gap-2 flex-shrink-0 flex-wrap'>
+          <div className='flex flex-row h-[256px] gap-2 flex-shrink-0 flex-wrap mb-2'>
             <div className='flex-1 w-full'>
               <Chats/>
             </div>
             <div className='flex-1 w-full'>
               <TopStates/>
             </div>
-            <div className='flex-1 w-full'>
+            <div className='flex-1 w-full mr-2'>
               <NewDeals/>
             </div>
           </div>

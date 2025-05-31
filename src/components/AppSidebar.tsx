@@ -33,7 +33,7 @@ const AppSidebar = ({ showIconsOnly, toggleIconsAndText }: AppSidebarProps) => {
 
   return (
     <div 
-    className={`flex flex-col justify-between ${sidebarWidth} rounded-[16px] bg-white p-5 transition-all duration-300 fixed inset-y-0 left-0 overflow-auto`}
+    className={`flex flex-col justify-between ${sidebarWidth} rounded-[16px] bg-white p-5 transition-all duration-300 fixed inset-y-0 left-0`}
     style={{
       top: '1.5rem',
       bottom: '1rem',
