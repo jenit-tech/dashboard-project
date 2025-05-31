@@ -42,7 +42,7 @@ const Growth = () => {
   };
 
   return (
-    <div className="flex flex-col w-full h-[256px] rounded-[16px] p-6 m-2 bg-white">
+    <div className="flex flex-col w-full h-[256px] rounded-[16px] p-6  bg-white">
       <div className="w-full flex justify-between mb-1">
         <p className="font-inter font-semibold text-[20px] leading-[100%] tracking-[-0.2px] text-[#131313]">
           Growth

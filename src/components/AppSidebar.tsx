@@ -51,7 +51,10 @@ const AppSidebar = ({ showIconsOnly, toggleIconsAndText }: AppSidebarProps) => {
         {/* Search with toggle */}
         <div>
           {showIconsOnly ? (
-            <Search className="w-4 h-4 text-gray-500 mr-2" />
+             <div className="mx-auto flex flex-row items-center  w-full rounded-[20px] border border-[var(--Light-Gray,#F1F1F1)] bg-[var(--White,#FFFFFF)] p-2">
+           
+            <Search className="w-5 h-5 text-gray-500 mr-2" />
+            </div>
           ) : (
             <div className="flex items-center w-[240px] h-[40px] rounded-[20px] border border-[var(--Light-Gray,#F1F1F1)] bg-[var(--White,#FFFFFF)] px-[16px] py-[12px]">
               <Search className="w-4 h-4 text-gray-500 mr-2" />
