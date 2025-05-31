@@ -17,7 +17,7 @@ const TopBuyer = () => {
 Maggie Johnson
 </p>
 <p className="font-inter font-normal text-[12px] leading-[100%] tracking-[-0.3px] text-[#454545] whitespace-nowrap">
-Oasis Organic Inc.
+Oasis Organic Inc. 
 </p>
 </div>
  

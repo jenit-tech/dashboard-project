@@ -20,7 +20,7 @@ const Quarter = () => {
         </h2>
       
         {/* Chart + Centered Percentage */}
-        <div className="relative w-[200px] h-[100px] flex items-center justify-center">
+        <div className="relative w-[200px] h-[100px] flex items-center justify-center" >
           <RadialBarChart
             width={200}
             height={200}
@@ -29,15 +29,17 @@ const Quarter = () => {
             innerRadius="80%"
             outerRadius="100%"
             barSize={20}
-            data={[{ name: 'Goal', value: 84, fill: '#FFCD71' }]}
+            data={[{ name: 'Goal', value: 84, fill: '#FFCD71'}]}
             startAngle={180}
             endAngle={0}
+            
           >
             <PolarAngleAxis
               type="number"
               domain={[0, 100]}
               angleAxisId={0}
               tick={false}
+              
             />
             <RadialBar
               background
@@ -45,6 +47,7 @@ const Quarter = () => {
               cornerIsExternal={false} 
               dataKey="value"
               angleAxisId={0}
+              
             />
           </RadialBarChart>
       
